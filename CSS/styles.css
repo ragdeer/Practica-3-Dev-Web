@@ -1,4 +1,4 @@
-/* Colores de acceso global */
+/* colores definidos para usar con el var */
 :root {
     --blanco: #FFFFFF;
     --oscuro: #212121;
@@ -10,7 +10,7 @@
   
   html {
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box; /*Hack para el uso del box model*/
     background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
     /* gradiente es el degradado de colores indicados de gris a blanco */
     scroll-snap-type: mandatory;
@@ -27,9 +27,7 @@
   los puntos de ajuste */
   }
   
-  *,
-  *:before,
-  *:after {
+  *, *:before, *:after {
     box-sizing: inherit;
   }
   
@@ -45,7 +43,7 @@
     -moz-box-shadow: 0px 0px 15px 0px rgba(112, 112, 112, 0.48);
     background-color: var(--blanco);
     padding: 2rem; /* Espacio de relleno interior "engordar" */
-    border-radius: 2rem; /* Esquinas redondeadas */
+    border-radius: 2rem; /* para tener las esquinas redondas */
   }
   
   h1 {
@@ -99,8 +97,8 @@
   
   .navegacion-principal {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column;/*define la direccion de los elementos esta caso en columnas*/
+    justify-content: space-between; /*distribuye los elementos con el mismo espacio entre ellos*/
     font-weight: bold;
     font-size: 2rem;
     align-items: center;
@@ -128,7 +126,7 @@
     background-repeat: no-repeat; /* para evitar que la imagen se repita si se hace zoom out*/
     background-size: cover;
     height: 450px; /*alto del elemento hero*/
-    position: relative; /* el padre debe ser relative */
+    position: relative; /* el padre debe ser relativo */
     margin-bottom: 2rem;/*Margen inferior para separar hacia abajo*/
 
 
@@ -214,7 +212,7 @@
     height: 15rem;
     width: 15rem;
     background-color: var(--primario);
-    border-radius: 50%;
+    border-radius: 50%; /*border radius al 50% hace un circulo*/
     display: flex;
     justify-content: space-evenly;
     align-items: center;
